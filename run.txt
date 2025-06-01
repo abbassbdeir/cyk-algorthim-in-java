@@ -1,0 +1,70 @@
+javac "C:\Users\user\Desktop\CYK-algorithm-master\CYK-algorithm-master\CYK.java"
+
+
+java -cp "C:\Users\user\Desktop\CYK-algorithm-master\CYK-algorithm-master" CYK "C:\Users\user\Desktop\CYK-algorithm-master\CYK-algorithm-master\grammar.txt" abbbabaa
+
+
+
+
+
+java -cp "C:\Users\user\Desktop\CYK-algorithm-master\CYK-algorithm-master" CYK "C:\Users\user\Desktop\CYK-algorithm-master\CYK-algorithm-master\grammarr.txt" ab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This Java program implements the Cocke-Younger-Kasami (CYK) algorithm for parsing context-free grammars (CFGs). Here's a breakdown of how the code works:
+
+Import Statements: The program imports necessary Java classes for file I/O and data structures.
+
+Class Declaration: The CYK class is declared, which contains the main logic for the CYK algorithm.
+
+Global Variables: Several global variables are declared:
+
+word: Stores the input word to be parsed by the CYK algorithm.
+startingSymbol: Stores the starting symbol of the CFG.
+isTokenWord: Indicates whether the input word is a sequence of tokens or characters.
+terminals and nonTerminals: Lists to store the terminals and non-terminals of the CFG, respectively.
+grammar: A TreeMap to store the grammar rules.
+
+Main Method: The main method serves as the entry point of the program. It checks the command-line arguments and invokes the doSteps method to execute the CYK algorithm.
+
+doSteps Method: This method orchestrates the execution of the CYK algorithm. It first parses the grammar from the input file using the parseGrammar method, then creates a CYK table using the createCYKTable method, performs the CYK algorithm using the doCyk method, and finally prints the result using the printResult method.
+
+parseGrammar Method: This method reads the grammar rules from the input file, extracts the terminals and non-terminals, and populates the grammar TreeMap with the production rules.
+
+getWord Method: This method extracts the input word from the command-line arguments.
+
+printResult Method: This method prints the results of the CYK algorithm, including the input word, grammar details, CYK table, and whether the word can be derived from the CFG.
+
+drawTable Method: This method is responsible for drawing the CYK table in a tabular format.
+
+findLongestString Method: This method finds the length of the longest string in a 2D array.
+
+createCYKTable Method: This method initializes the CYK table as a jagged array based on the length of the input word.
+
+doCyk Method: This method performs the CYK algorithm on the CYK table.
+
+manageWord Method: This method manages the input word based on whether it consists of characters or tokens.
+
+checkIfProduces Method: This method checks if a set of symbols can produce a given string according to the grammar rules.
+
+getAllCombinations Method: This method generates all possible combinations of symbols from two sets of symbols.
+
+toString and toArray Methods: These methods convert arrays to strings and vice versa.
+
+openFile Method: This method opens a file for reading.
+
+Overall, the program reads a CFG from a file, parses it, creates a CYK table, executes the CYK algorithm, and then prints the results of the parsing process.

@@ -1,0 +1,8 @@
+S
+a b c
+S A B 
+S ABC | CD
+A a
+B b
+C c
+D d 
